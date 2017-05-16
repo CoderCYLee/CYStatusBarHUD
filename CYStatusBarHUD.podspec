@@ -13,7 +13,7 @@ s.source       = { :git => 'https://github.com/CoderCYLee/CYStatusBarHUD.git', :
 s.platform     = :ios, '6.0'
 s.requires_arc = true
 
-s.source_files  = 'CYStatusBarHUD'
+s.source_files  = 'CYStatusBarHUD/*.{h,m}'
 s.resource  = 'CYStatusBarHUD/CYStatusBarHUD.bundle'
 s.framework = 'UIKit'
 

@@ -23,8 +23,11 @@ static UIWindow *window_;
 static NSTimer *timer_;
 
 + (void)showWindow {
+    
+    CGFloat statusH = [UIApplication sharedApplication].statusBarFrame.size.height;
+    
     // frame数据
-    CGFloat windowH = 20;
+    CGFloat windowH = statusH;
     CGRect frame = CGRectMake(0, - windowH, [UIScreen mainScreen].bounds.size.width, windowH);
     
     // 显示窗口

@@ -1,11 +1,9 @@
 # CYStatusBarHUD
-One Simple StatusBar HUD
+One Simple StatusBar HUD use Objective-C.
 
-## 显示成功信息
+### Support 
 
+Show message.
 
-
-## 显示失败信息
-
-
+Show loading.
 

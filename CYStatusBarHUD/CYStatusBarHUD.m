@@ -8,7 +8,7 @@
 
 #import "CYStatusBarHUD.h"
 
-#define CYMessageFont [UIFont systemFontOfSize:15]
+#define CYMessageFont [UIFont systemFontOfSize:12]
 
 /** 消息的停留时间 */
 static CGFloat const CYMessageDuration = 2.0;
@@ -62,7 +62,7 @@ static NSTimer *timer_;
     // 添加文字
     UILabel *label = [[UILabel alloc] init];
     label.font = CYMessageFont;
-    label.frame = window_.bounds;
+    label.frame = CGRectMake(0, window_.bounds.size.height-20, window_.bounds.size.width, 20);
     label.textAlignment = NSTextAlignmentCenter;
     label.text = msg;
     label.textColor = [UIColor whiteColor];
@@ -72,9 +72,9 @@ static NSTimer *timer_;
     UIActivityIndicatorView *loadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     [loadingView startAnimating];
     // 文字宽度
-    CGFloat msgW = [msg sizeWithAttributes:@{NSFontAttributeName : CYMessageFont}].width;
+    CGFloat msgW = [msg sizeWithAttributes: @{NSFontAttributeName : CYMessageFont}].width;
     CGFloat centerX = (window_.frame.size.width - msgW) * 0.5 - 20;
-    CGFloat centerY = window_.frame.size.height * 0.5;
+    CGFloat centerY = window_.frame.size.height - 20 * 0.5 ;
     loadingView.center = CGPointMake(centerX, centerY);
     [window_ addSubview:loadingView];
 
@@ -118,7 +118,7 @@ static NSTimer *timer_;
         [button setImage:image forState:UIControlStateNormal];
         button.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
     }
-    button.frame = window_.bounds;
+    button.frame = CGRectMake(0, window_.bounds.size.height-20, window_.bounds.size.width, 20);
     [window_ addSubview:button];
     
 

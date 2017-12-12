@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 
 
 s.name         = 'CYStatusBarHUD'
-s.version      = '0.0.4'
+s.version      = '0.1.0'
 s.summary      = 'CYStatusBarHUD'
 s.homepage     = 'https://github.com/cywd/CYStatusBarHUD'
 s.license      = 'MIT'
